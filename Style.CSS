@@ -1,0 +1,276 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050811;
+color:white;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:800;
+}
+
+.socials{
+display:flex;
+gap:20px;
+}
+
+.socials a{
+color:gray;
+font-size:1.3rem;
+transition:0.3s;
+}
+
+.socials a:hover{
+color:#72b7ff;
+transform:translateY(-5px);
+}
+
+.theme-btn{
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+color:white;
+cursor:pointer;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 8%;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:900;
+}
+
+.hero span{
+color:#72b7ff;
+}
+
+.hero h2{
+margin-top:20px;
+max-width:900px;
+line-height:1.8;
+font-weight:300;
+}
+
+.type-text{
+margin-top:30px;
+font-size:1.2rem;
+animation:glow 6s infinite linear;
+}
+
+@keyframes glow{
+
+0%{color:#72b7ff;}
+50%{color:#ffffff;}
+100%{color:#72b7ff;}
+
+}
+
+.pipe{
+height:120px;
+position:relative;
+}
+
+.pipe::before{
+content:"Quantum Vortices Affect";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+background:#1b1b1b;
+padding:12px 40px;
+border-radius:50px;
+box-shadow:0 0 20px rgba(114,183,255,0.5);
+}
+
+section{
+padding:80px 8%;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+padding:40px;
+backdrop-filter:blur(12px);
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:30px;
+}
+
+.tags,
+.languages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.tag,
+.language{
+padding:20px;
+border-radius:20px;
+background:rgba(114,183,255,0.08);
+transition:0.3s;
+}
+
+.tag:hover,
+.language:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(114,183,255,0.3);
+}
+
+.blackhole-container{
+position:relative;
+width:700px;
+height:700px;
+margin:100px auto;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.blackhole{
+width:220px;
+height:220px;
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+#000 10%,
+#050505 40%,
+rgba(114,183,255,0.3) 70%,
+transparent 100%);
+
+box-shadow:
+0 0 60px rgba(114,183,255,0.5),
+0 0 120px rgba(114,183,255,0.2);
+
+animation:spin 10s linear infinite;
+}
+
+@keyframes spin{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+.orbit{
+position:absolute;
+border:1px dashed rgba(114,183,255,0.2);
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+}
+
+.orbit span{
+position:absolute;
+top:-15px;
+font-family:monospace;
+color:#8cc8ff;
+}
+
+.orbit1{
+width:300px;
+height:300px;
+animation:rotateOrbit 12s linear infinite;
+}
+
+.orbit2{
+width:400px;
+height:400px;
+animation:rotateOrbit 18s linear infinite reverse;
+}
+
+.orbit3{
+width:500px;
+height:500px;
+animation:rotateOrbit 24s linear infinite;
+}
+
+.orbit4{
+width:600px;
+height:600px;
+animation:rotateOrbit 30s linear infinite reverse;
+}
+
+.orbit5{
+width:700px;
+height:700px;
+animation:rotateOrbit 36s linear infinite;
+}
+
+@keyframes rotateOrbit{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.blackhole-container{
+width:350px;
+height:350px;
+}
+
+.blackhole{
+width:150px;
+height:150px;
+}
+
+}
